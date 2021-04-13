@@ -1,0 +1,85 @@
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.company-name-container{
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  color: #10539c;
+}
+
+.company-name-title{
+  text-decoration: underline;
+}
+
+.login-title-container{
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  color: #2FA950;
+
+}
+
+.login-container{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px 0 10px 0;
+  width: 25%;
+  margin: auto;
+  height: 450px;
+  color: #10539c;
+  border: 3px solid #10539c;
+
+}
+
+.login-container-username__container,
+.login-container-password__container{
+  margin: 45px 0 0 0;
+  display: flex;
+}
+
+p {
+  text-transform: uppercase;
+  color: white;
+  margin-left: 10px;
+  color: #10539c;
+  font-weight: 800;
+  font-size: 18px;
+
+}
+
+input {
+  background-color: white;
+  margin-left: 10px;
+  border-radius: 12px;
+  padding: 0 0 0 10px;
+  color: black;
+}
+
+.login-container-forgot__container{
+  margin-top: 20px;
+  background-color: white;
+}
+
+.login-container-forgot-link{
+  /* color:antiquewhite; */
+  /* border-radius: 12px; */
+  /* border: 1px solid pink; */
+  /* width: 200%; */
+  /* color: black; */
+  /* background-color: white; */
+
+}
+
+a {
+  background-color: white;
+}
+
+a:visited{
+  color: #2FA950;
+}
