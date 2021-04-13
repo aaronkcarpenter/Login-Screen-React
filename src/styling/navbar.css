@@ -1,0 +1,27 @@
+.logo-container{
+
+}
+.navbar-container{
+  display: flex;
+  justify-content: flex-start;
+  /* justify-content: space-evenly; */
+  border-bottom: 1px solid #10539c;
+  padding: 20px 0 20px 0;
+  position: absolute;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.navbar-link{
+  font-size: 30px;
+  color: #10539c;
+  margin-left: 60px;
+  text-decoration: none;
+}
+
+a{
+  color: black;
+}
+
+.logo{
+}
