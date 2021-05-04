@@ -4,8 +4,13 @@ import login_image from '../assets/login_image.jpeg'
 
 function LoginPageHooks(props) {
   // Verify that the prop is being passed down from the App to the component
-  console.log(props.prop_one)
+  // console.log(props.prop_one)
 
+  const [userName, setUserName] = useState()
+  const [attempts, setAttempts] = useState(0)
+  // const [userName, setUserName] = useState('tester')
+
+  
   return (
     <div className='login-page-container'>
       <div className='company-name-container'>
@@ -18,13 +23,18 @@ function LoginPageHooks(props) {
       <div className='login-container'>
         <div className='login-title-container'>
           <h2 classname='login-title'>
-            Login
+            Login Attempts: { attempts }
           </h2>
+          { attempts > 2 &&
+            <h4>
+              See Manager: Login Attempts Exceeded
+            </h4>
+          }
         </div>
         <div className='login-container-username__container'>
           {/* <label htmlFor='username'>Username</label> */}
           <p>Username</p>
-          <input className='login-container__username' defaultValue={props.username}/>
+          <input className='login-container__username'/>
         </div>
         <div className='login-container-password__container'>
           <p>Password</p>
@@ -35,7 +45,7 @@ function LoginPageHooks(props) {
           <a href='/' className='login-container-forgot-link'>Reset Password</a>
         </div>
         <div className='button-container'>
-          <button className='button'>{props.prop_one}</button>
+          <button className='button' onClick={() => setAttempts(attempts + 1)}>{props.prop_one}</button>
         </div>
       </div>
     </div>
