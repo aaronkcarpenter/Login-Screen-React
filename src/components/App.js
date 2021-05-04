@@ -14,7 +14,7 @@ function App() {
       {/* <LoginPage /> */}
       <Footer />
       {/* <Test s1='😆' s2='😆' s3='😆' s4="😁"/> */}
-      <LoginPageHooks prop_one='Login' username='demouser@lslog.com' password='demo' />
+      <LoginPageHooks prop_one='Login' username='demouser@lslog.com' password='demotwice' />
     </div>
   );
 }
