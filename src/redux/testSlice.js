@@ -10,6 +10,7 @@ const userSlice = createSlice({
     { id: 1, name: 'acarpenter@lslog.com', loggedIn: true },
     { id: 2, name: 'jcarter@lslog.com', loggedIn: false },
     { id: 3, name: 'kchao@lslog.com', loggedIn: false },
+    { id: 4, name: 'demouser@lslog.com', loggedIn: false },
   ],
   // Takes the current state and creates new state from it based on the action payload
   reducers: {
@@ -27,7 +28,7 @@ const userSlice = createSlice({
       };
       // Pushing the user into the store/state object. At this point, redux
       // takes the new state and updates the store
-      state.push(user)
+      state.push(user);
     },
   },
 });

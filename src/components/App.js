@@ -6,6 +6,7 @@ import Footer from './Footer'
 import Navbar from './Navbar';
 import Test from './Test';
 import LoginPageHooks from './LoginPageHooks';
+import Welcome from './Welcome'
 
 function App() {
   return (
