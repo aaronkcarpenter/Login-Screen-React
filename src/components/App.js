@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import '../styling/index.css'
 import '../styling/footer.css'
 import LoginPage from './LoginPage'
@@ -8,7 +8,15 @@ import Test from './Test';
 import LoginPageHooks from './LoginPageHooks';
 import Welcome from './Welcome'
 
-function App() {
+const App = () => {
+  const [page, setPage] = useState({page: 'login'});
+
+  const changePage = (newPage) => {
+    this.setPage({
+      page: newPage
+    })
+  }
+
   return (
     <div>
       <Navbar />

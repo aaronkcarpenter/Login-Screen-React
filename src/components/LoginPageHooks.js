@@ -5,12 +5,12 @@ import login_image from '../assets/login_image.jpeg'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../redux/testSlice';
 
-function LoginPageHooks(props) {
+const LoginPageHooks = (props) => {
   // Verify that the prop is being passed down from the App to the component
   // console.log(props.prop_one)
 
   const [userName, setUserName] = useState(props.username)
-  const [passWord, setPassword] = useState(props.password)
+  const [password, setPassword] = useState(props.password)
   const [attempts, setAttempts] = useState(0)
   const dispatch = useDispatch();
 

@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 // Tracks the number of users on the system
-const userSlice = createSlice({
+export const userSlice = createSlice({
   // the name of the slice/piece of data
-  name: 'users',
+  name: 'usersNameofSlice',
   // dummy data to test
   initialState: [
     { id: 1, name: 'acarpenter@lslog.com', loggedIn: true },
