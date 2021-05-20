@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../assets/logo.png'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -9,10 +10,10 @@ const Navbar = () => {
         <img src={logo} alt='logo' className='logo' />
       </div> */}
         <img src={logo} alt='logo' className='logo' />
-        <a className='navbar-link' href='/home'>Home</a>
-        <a className='navbar-link' href='/wms'>WMS</a>
-        <a className='navbar-link' href='/tms'>TMS</a>
-        <a className='navbar-link' href='/tms'>Help</a>
+        <Link to='/inventory' className='navbar-link'>Home</Link>
+        <Link to='/reporting' className='navbar-link' >Reports</Link>
+        <Link to='/receiving' className='navbar-link'>Inbounds</Link>
+        <Link to='shipping' className='navbar-link'>Outbounds</Link>
       </div>
       
     </div>

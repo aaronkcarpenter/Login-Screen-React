@@ -6,14 +6,19 @@ import './styling/navbar.css'
 import App from './components/App';
 
 // Adding Redux for state management
-import store from './redux/store';
+import store from './redux/store/index'
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
