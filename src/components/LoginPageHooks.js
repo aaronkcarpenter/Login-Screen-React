@@ -34,7 +34,7 @@ const LoginPageHooks = (props) => {
   }, []);
 
   // handleChange = (e) => {
-  //   this.setUserName({
+  //   setUserName({
   //     userName: e.target.value
   //   });
   // }
@@ -57,11 +57,11 @@ const LoginPageHooks = (props) => {
             <div className='login-container-username__container'>
               {/* <label htmlFor='username'>Username</label> */}
               <label>Username</label>
-              <input type='email' className='login-container__username' placeholder='Enter Username' onChange={(e) => setUserName(e.target.value)}/>
+              <input type='email' name='email' className='login-container__username' placeholder='Enter Username' onChange={(e) => setUserName(e.target.value)}/>
             </div>
             <div className='login-container-password__container'>
               <label>Password</label>
-              <input className='login-container__password' type='password' placeholder='Enter Password' />
+              <input className='login-container__password' type='password' name='password' placeholder='Enter Password' onChange={(e) => setPassword(e.target.value)} />
             </div>
             {/* this isn't needed when passing down prop into a functional component */}
             <div className='login-container-forgot__container'>
@@ -80,6 +80,7 @@ const LoginPageHooks = (props) => {
               }
             </div>
             <div className='button-container'>
+              <label></label>
               <button type='submit' className='button' onClick={() => setAttempts(attempts + 1)}>{props.prop_one}</button>
             </div>
 
