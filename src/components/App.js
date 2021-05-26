@@ -30,9 +30,9 @@ const App = () => {
   return (
     <div>
       <Switch>
-        <Route path='/' component={LoginPageHooks} exact/>
-        <Route path='/welcome' component={Welcome} />
-
+        <Route path='/' component={LoginPageHooks} prop_one='Submit' exact/>
+        <Route exact path='/welcome' component={Welcome} />
+        <Route render={() => <h1>PAGE NOT FOUND</h1>} />
         {/* <LoginPage /> */}
         {/* <Test s1='😆' s2='😆' s3='😆' s4="😁"/> */}
         {/* <LoginPageHooks prop_one='Login' username='demouser@lslog.com' password='demotwice' /> */}

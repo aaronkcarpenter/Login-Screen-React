@@ -15,6 +15,7 @@ const LoginPageHooks = (props) => {
   const [userName, setUserName] = useState(props.username)
   const [password, setPassword] = useState(props.password)
   const [attempts, setAttempts] = useState(0)
+  const [button, setButton] = useState('SUBMIT')
   const dispatch = useDispatch();
 
   const onSubmit = (e) => {
@@ -67,10 +68,15 @@ const LoginPageHooks = (props) => {
             <div className='login-container-forgot__container'>
               <a href='/' className='login-container-forgot-link'>Reset Password</a>
             </div>
+            <div className='button-container'>
+              <button type='submit' className='button' onClick={() => setAttempts(attempts + 1)}>
+                { button }
+              </button>
+            </div>
             <div className='login-title-container'>
-              <h2 className='login-title'>
-                Login Attempts: { attempts }
-              </h2>
+              <p className='login-title'>
+                 Login Attempts: { attempts }
+              </p>
               { attempts > 2 &&
                 <h4>
                   See Manager: Login Attempts Exceeded
@@ -78,10 +84,6 @@ const LoginPageHooks = (props) => {
                 </h4>
 
               }
-            </div>
-            <div className='button-container'>
-              <label></label>
-              <button type='submit' className='button' onClick={() => setAttempts(attempts + 1)}>{props.prop_one}</button>
             </div>
 
           </form>
